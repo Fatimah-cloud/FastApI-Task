@@ -1,0 +1,56 @@
+{
+  "model_name": "churn-rf",
+  "version": "1.0.0",
+  "trained_at": "2026-07-12T14:20:01.449419+00:00",
+  "target": "churned",
+  "classes": [
+    "retained",
+    "churned"
+  ],
+  "threshold": 0.5,
+  "features": {
+    "tenure_months": {
+      "type": "int",
+      "min": 0,
+      "max": 72
+    },
+    "monthly_charges": {
+      "type": "float",
+      "min": 15,
+      "max": 120
+    },
+    "total_charges": {
+      "type": "float",
+      "min": 0,
+      "max": 10000
+    },
+    "support_tickets": {
+      "type": "int",
+      "min": 0,
+      "max": 10
+    },
+    "contract_type": {
+      "type": "enum",
+      "values": [
+        "month-to-month",
+        "one-year",
+        "two-year"
+      ]
+    },
+    "internet_service": {
+      "type": "enum",
+      "values": [
+        "dsl",
+        "fiber",
+        "none"
+      ]
+    },
+    "has_streaming": {
+      "type": "bool"
+    }
+  },
+  "metrics": {
+    "accuracy": 0.7412,
+    "roc_auc": 0.7899
+  }
+}
