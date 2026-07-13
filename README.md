@@ -50,5 +50,5 @@ Example Response
   "model_version": "1.0.0",
   "created_at": "2026-07-12T15:20:00Z"
 }
----
+
 
